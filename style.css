@@ -453,10 +453,6 @@ body {
     font-weight: 600;
 }
 
-/* =========================================
-   CÂU 2: ĐÁNH GIÁ TỪ DU KHÁCH
-========================================= */
-
 .reviews-section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -506,10 +502,6 @@ body {
     line-height: 1.8;
     margin-bottom: 0;
 }
-
-/* =========================================
-   RESPONSIVE: ĐIỆN THOẠI
-========================================= */
 
 @media (max-width: 768px) {
     .hotel-section,
