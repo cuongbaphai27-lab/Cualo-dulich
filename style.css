@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.hero {
+    position: relative;
+    height: 550px;
+    background: url('cualo.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-yellow {
+    background-color: #eab308;
+    color: #1e293b;
+}
+
+.btn-yellow:hover {
+    background-color: #ca8a04;
+}
+
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.features-section {
+    padding: 60px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-yellow { color: #eab308; }
+.text-blue { color: #3b82f6; }
+.text-green { color: #10b981; }
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+.destinations-section {
+    padding: 60px 0;
+    background-color: #f1f5f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.dest-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.dest-card:hover {
+    transform: translateY(-5px);
+}
+
+.dest-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dest-body {
+    padding: 25px;
+}
+
+.dest-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.dest-body p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.tag.blue {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.tag.green {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+.cuisine-section {
+    padding: 60px 0;
+}
+
+.cuisine-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .cuisine-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cuisine-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cuisine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cuisine-item {
+    display: flex;
+    gap: 15px;
+}
+
+.check-icon {
+    font-size: 1.5rem;
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cuisine-item h4 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.cuisine-item p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    padding: 50px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer ul li a:hover {
+    color: white;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85srem;
+    width: fit-content;
+}
+
+.btn-social.facebook { background-color: #1877f2; }
+.btn-social.twitter { background-color: #1da1f2; }
+.btn-social.youtube { background-color: #ff0000; }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.hotel-section {
+    padding: 60px 0;
+    background-color: #f1f5f9;
+}
+
+.hotel-card {
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hotel-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.hotel-card .card-body {
+    padding: 20px;
+}
+
+.hotel-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.hotel-card .card-text {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.hotel-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.hotel-price {
+    color: #dc3545;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hotel-card .btn {
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* =========================================
+   CÂU 2: ĐÁNH GIÁ TỪ DU KHÁCH
+========================================= */
+
+.reviews-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.review-card {
+    height: 100%;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.review-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f0c94d;
+}
+
+.review-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.review-comment {
+    color: #64748b;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   RESPONSIVE: ĐIỆN THOẠI
+========================================= */
+
+@media (max-width: 768px) {
+    .hotel-section,
+    .reviews-section {
+        padding: 40px 0;
+    }
+
+    .hotel-img {
+        height: 200px;
+    }
+
+    .hotel-price {
+        font-size: 1.1rem;
+    }
+
+    .review-card {
+        padding: 20px 15px;
+    }
+}
